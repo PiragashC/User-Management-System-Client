@@ -115,15 +115,18 @@ const Register = () => {
                 className="form-label mt-4">
                     Role of User
                 </label>
-                <input 
-                type="text" 
-                className="form-control" 
-                id="role" 
+                <select 
+                class="form-select" 
+                id="roleSelect"
                 name="role" 
                 value = {credentials.role}
                 onChange={handleInputChange}
-                placeholder="Enter the user role (Eg:admin/teacher/student)"
-                required />
+                required>
+                    <option value="">Select a role</option>
+                    <option value="admin">Admin</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="student">Student</option>
+                </select>
             </div>
             <input type='submit' value="Register" className='btn btn-primary my-3' />
             <p>
